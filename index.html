@@ -1,0 +1,129 @@
+<!DOCTYPE html><html>
+<head>
+    <title>Free Recharge</title>
+  <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #090979, #4424a8, #00c6ff);
+    padding: 30px 20px;
+}
+
+form {
+    width: 100%;
+    max-width: 380px;
+    padding: 30px 25px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(15px);
+    border: 1px solid white;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+p {
+    color: white;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+label {
+    color: white;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(90deg, #ff00cc, #7b2ff7);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(255,0,204,0.6);
+}
+  </style>
+</head>
+<body><h1>🎁 FREE RECHARGE</h1>
+<p>Get your free mobile recharge!</p>
+
+<form id="rechargeForm">
+
+    <label>Enter Mobile Number</label>
+    <input type="tel" id="number" maxlength="10"
+    placeholder="Enter 10 digit number" required>
+
+    <br><br>
+
+    <label>Select SIM</label>
+    <select id="sim" required>
+        <option value="">Select SIM</option>
+        <option>Jio</option>
+        <option>Airtel</option>
+        <option>Vi</option>
+        <option>BSNL</option>
+    </select>
+
+    <br><br>
+
+    <label>Select Package</label>
+    <select id="package" required>
+        <option value="">Select Package</option>
+        <option>₹149</option>
+        <option>₹199</option>
+        <option>₹299</option>
+        <option>₹399</option>
+        <option>₹599</option>
+    </select>
+
+    <br><br>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+<script>
+document.getElementById("rechargeForm")
+.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    window.location.href = "result.html";
+});
+</script>
+
+</body>
+</html>
